@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {BranchSearchComponent, PhonePipe} from './branch-search/branch-search.component';
+import {AuthenticationInterceptor} from "./authentication.interceptor";
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import {BranchSearchComponent, PhonePipe} from './branch-search/branch-search.co
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

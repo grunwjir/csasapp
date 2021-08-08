@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AuthenticationService} from "./authentication.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Csas Branches';
+
+  constructor(private authenticationService: AuthenticationService) {
+  }
+
+  updateSecret(secret: string) {
+    this.authenticationService.setCredentials(secret);
+  }
+
 }
