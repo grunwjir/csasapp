@@ -1,0 +1,9 @@
+<app-branch-search (searchTextChanged)="searchTextChanged($event)"></app-branch-search>
+
+<div class="row">
+  <app-branch-item *ngFor="let branch of branches" class="col-sm-3 mb-3"
+                   [branch]="branch">
+  </app-branch-item>
+</div>
+
+<app-branch-paging [paging]="paging" (currentPageChanged)="currentPageChanged($event)"></app-branch-paging>

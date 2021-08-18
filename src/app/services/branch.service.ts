@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
-import {Branches} from './branch.model';
+import {Branches} from '../models/branch.model';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class BranchService {
   constructor(private http: HttpClient) {
   }
 
-  fetchBranches(queryText: string): Observable<Branches> {
-    return this.http.get<Branches>(`${this.apiUrl}/branches?query=${queryText}&size=4`);
+  fetchBranches(queryText: string, pageNumber: number = 0, pageSize: number = 4): Observable<Branches> {
+    return this.http.get<Branches>(`${this.apiUrl}/branches?query=${queryText}&size=${pageSize}&page=${pageNumber}`);
   }
 }

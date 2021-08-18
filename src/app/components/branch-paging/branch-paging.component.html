@@ -1,0 +1,8 @@
+<ngb-pagination class="d-flex justify-content-center"
+                [(page)]="paging.currentPage"
+                [pageSize]="paging.pageSize"
+                [collectionSize]="paging.collectionSize"
+                [maxSize]="10"
+                (pageChange)="pageChanged()"
+                aria-hidden="true">
+</ngb-pagination>

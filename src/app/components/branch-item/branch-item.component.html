@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{branch.name}}</h5>
+  </div>
+  <div class="card-body">
+    <p><i class="bi bi-person icon"></i> {{branch.manager}}</p>
+    <p><i class="bi bi-geo-alt icon"></i> {{branch.address.street}}, {{branch.address.city}}
+      {{branch.address.postalCode}}</p>
+    <p><i class="bi bi-telephone icon"></i> <span *ngFor="let phone of branch.phones"> {{phone | phone}}</span>
+    </p>
+    <p><i class="bi bi-envelope icon"></i> {{branch.email}}</p>
+    <div *ngIf="branch.equipments.length > 0">Equipments:</div>
+    <p><span *ngFor="let equipment of branch.equipments"
+             class="label badge bg-light text-dark">{{equipment}}</span></p>
+    <h1 class="text-center"><span class="badge bg-primary"><i class="bi bi-star"></i> {{branch.googleMapsRating}}</span>
+    </h1>
+  </div>
+</div>

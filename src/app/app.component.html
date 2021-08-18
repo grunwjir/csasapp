@@ -1,22 +1,11 @@
 <div class="container">
-  <div class="row">
-    <div class="col">
-      <h1 class="display-1 text-center">Česká spořitelna Branches</h1>
-      <p class="lead text-center">Branches search with Google Maps ratings...</p>
-    </div>
-  </div>
+  <app-header class="row"></app-header>
 
   <div class="row">
-    <div class="col">
-      <app-branch-search></app-branch-search>
-    </div>
+    <app-branches class="col"></app-branches>
   </div>
+
   <div class="row justify-content-end">
-    <div class="col-2">
-      <div class="input-group input-group-sm mb-3">
-        <span class="input-group-text">Secret</span>
-        <input type="password" (input)="updateSecret($any($event.target).value)" class="form-control">
-      </div>
-    </div>
+    <app-secret-key class="col-2"></app-secret-key>
   </div>
 </div>
