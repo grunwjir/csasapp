@@ -1,8 +1,11 @@
 # Csasapp
 Angular simple application that allows you to search Csas branches and get their rating from Google Maps.
 
-<img width="1334" alt="csas-screenshot" src="https://user-images.githubusercontent.com/5020786/128639282-b2ace9a6-516b-4ca7-a102-b63bc969be8c.png">
+## Branches
+<img width="1367" alt="branches" src="https://user-images.githubusercontent.com/5020786/129948130-8da51c43-f619-49a8-af48-8587e0058cb5.png">
 
+## Login
+<img width="1374" alt="login" src="https://user-images.githubusercontent.com/5020786/129948232-139e7e1c-28d8-4e91-98d8-6e8e2fcf8859.png">
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.0.
 
