@@ -13,7 +13,7 @@ import {BranchItemComponent} from './components/branch-item/branch-item.componen
 import {HeaderComponent} from './components/header/header.component';
 import {PhonePipe} from "./helpers/phone.pipe";
 import { BranchPagingComponent } from './components/branch-paging/branch-paging.component';
-import { SecretKeyComponent } from './components/secret-key/secret-key.component';
+import { CredentialsComponent } from './components/credentials/credentials.component';
 
 
 @NgModule({
@@ -25,7 +25,7 @@ import { SecretKeyComponent } from './components/secret-key/secret-key.component
     BranchItemComponent,
     HeaderComponent,
     BranchPagingComponent,
-    SecretKeyComponent
+    CredentialsComponent
   ],
   imports: [
     BrowserModule,
