@@ -22,7 +22,7 @@ export class BranchesComponent implements OnInit {
   }
 
   currentPageChanged(currentPage: number): void {
-    this.fetchBranches(this.searchText, currentPage, this.paging.pageSize);
+    this.fetchBranches(this.searchText, currentPage, PAGE_SIZE);
   }
 
   searchTextChanged(text: string) {
