@@ -34,7 +34,7 @@ export class BranchesComponent implements OnInit {
     this.branchService.fetchBranches(searchText, currentPage - 1, pageSize).subscribe(response => {
       this.branches = response.items
       this.paging = {
-        pageSize: response.pageSize,
+        pageSize: PAGE_SIZE,
         currentPage: response.pageNumber + 1,
         collectionSize: response.totalItemCount
       }
