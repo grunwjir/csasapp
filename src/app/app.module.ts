@@ -12,8 +12,10 @@ import {BranchesComponent} from './components/branches/branches.component';
 import {BranchItemComponent} from './components/branch-item/branch-item.component';
 import {HeaderComponent} from './components/header/header.component';
 import {PhonePipe} from "./helpers/phone.pipe";
-import { BranchPagingComponent } from './components/branch-paging/branch-paging.component';
-import { CredentialsComponent } from './components/credentials/credentials.component';
+import {BranchPagingComponent} from './components/branch-paging/branch-paging.component';
+import {CredentialsComponent} from './components/credentials/credentials.component';
+import {NgProgressModule} from "ngx-progressbar";
+import {NgProgressHttpModule} from "ngx-progressbar/http";
 
 
 @NgModule({
@@ -32,7 +34,12 @@ import { CredentialsComponent } from './components/credentials/credentials.compo
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    NgProgressModule.withConfig({
+      spinnerPosition: "right",
+      color: "#0d6efd"
+    }),
+    NgProgressHttpModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthenticationInterceptor, multi: true}],
   bootstrap: [AppComponent]
